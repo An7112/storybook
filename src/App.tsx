@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Sidebar from 'component/sidebar/sidebar';
+import Form from 'pages/form/form';
 function App() {
 
   return (
@@ -10,7 +11,8 @@ function App() {
         <Sidebar />
         <div className='main'>
           <Routes>
-            <Route path='/' />
+            <Route path='/' element={<Navigate to='/form' />} />
+            <Route path='/form' element={<Form />} />
           </Routes>
         </div>
       </div>
