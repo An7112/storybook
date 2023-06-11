@@ -117,7 +117,7 @@ const CustomListView: React.FC<TabProps> = (props) => {
         <div className='div-label-input'>
           <label htmlFor="username">Username:</label>
           <input
-            type="text"
+            type="email"
             id="username"
             value={username}
             onChange={handleUsernameChange}
@@ -127,7 +127,7 @@ const CustomListView: React.FC<TabProps> = (props) => {
         <div className='div-label-input'>
           <label htmlFor="password">Password:</label>
           <input
-            type="text"
+            type="password"
             id="password"
             value={password}
             onChange={handlePasswordChange}
