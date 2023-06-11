@@ -10,10 +10,10 @@ const Tabs: React.FC<TabModal> = (props) => {
 
   const RowListComponent = props.RowList;
 
-  const [tabs, setTabs] = useState<Tab[]>([
+  const tabs:Tab[] = props.tabList && props.tabList?.length > 0 ? props.tabList : [
     { id: 1, title: 'ReactJS' },
     { id: 2, title: 'JS'},
-  ]);
+  ]
 
   const [activeTab, setActiveTab] = useState<number>(tabs[0].id);
 

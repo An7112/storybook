@@ -1,0 +1,15 @@
+.paginated-frame-ui{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-custom.paginated{
+    display: flex;
+    flex-direction: column;
+}
+
+.overview-frame{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
