@@ -131,25 +131,103 @@ const CustomListView: React.FC<TabProps> = (props) => {
     
   `;
 
-    return (
-        <div className='container-custom'>
-            <div className='layout-left'>
-                <h3>Component Overview</h3>
-                <p>Layout: The layout wrapper, in which Header Sider Content Footer or Layout itself can be nested, and can be placed in any parent container.</p>
-            </div>
-            <div className='source-code'>
-                <h3>Code</h3>
-                <SyntaxHighlighter language="javascript" style={materialDark}>
-                    {props.tabKey === 'JS'
-                        ?
-                        codeJS
-                        :
-                        codeReactjs
-                    }
-                </SyntaxHighlighter>
-
-            </div>
+    const codeGrid = `
+    //HTML
+    <div className='grid-view-col-6'>
+        <div className='grid-item'>
+            Col-1
         </div>
+        <div className='grid-item'>
+            Col-2
+        </div>
+        <div className='grid-item'>
+            Col-3
+        </div>
+        <div className='grid-item'>
+            Col-4
+        </div>
+        <div className='grid-item'>
+            Col-5
+        </div>
+        <div className='grid-item'>
+            Col-6
+        </div>
+    </div>
+
+    //CSS
+    .grid-view-col-6{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        column-gap: 6px;
+    }
+    
+    .grid-item{
+        border-radius: 4px;
+        color: var(--text-color);
+        font-size: 12px;
+        padding: var(--spacing-xs);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column: span 1 / span 1;
+        background-color: var(--main-major);
+    }
+  `
+
+    return (
+        <>
+            <div className='container-custom'>
+                <div className='layout-left'>
+                    <h3>Component Overview</h3>
+                    <p>Layout: The layout wrapper, in which Header Sider Content Footer or Layout itself can be nested, and can be placed in any parent container.</p>
+                </div>
+                <div className='source-code'>
+                    <h3>Code</h3>
+                    <SyntaxHighlighter language="javascript" style={materialDark}>
+                        {props.tabKey === 'JS'
+                            ?
+                            codeJS
+                            :
+                            codeReactjs
+                        }
+                    </SyntaxHighlighter>
+
+                </div>
+            </div>
+            <div className='container-custom'>
+                <div className='layout-left'>
+                    <h3>Grid</h3>
+                    <div className='grid-view-col-6'>
+                        <div className='grid-item'>
+                            Col-1
+                        </div>
+                        <div className='grid-item'>
+                            Col-2
+                        </div>
+                        <div className='grid-item'>
+                            Col-3
+                        </div>
+                        <div className='grid-item'>
+                            Col-4
+                        </div>
+                        <div className='grid-item'>
+                            Col-5
+                        </div>
+                        <div className='grid-item'>
+                            Col-6
+                        </div>
+                    </div>
+                </div>
+                <div className='source-code'>
+                    <h3>Code</h3>
+                    <SyntaxHighlighter language="javascript" style={materialDark}>
+                        {codeGrid}
+                    </SyntaxHighlighter>
+
+                </div>
+            </div>
+        </>
     );
 }
 
