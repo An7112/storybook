@@ -1,0 +1,8 @@
+.container-custom.pdfviewer{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-custom.pdfviewer p{
+    font-size: 14px;
+}
