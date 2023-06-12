@@ -4,7 +4,8 @@ import {
     AiOutlineFilter,
     AiOutlineLayout,
     AiOutlineFolder,
-    AiOutlineFilePdf
+    AiOutlineFilePdf,
+    AiOutlineFieldTime
 } from 'react-icons/ai'
 
 export const linkList: Array<sidebarModal> = [
@@ -32,5 +33,10 @@ export const linkList: Array<sidebarModal> = [
         link: "pdfviewer",
         name: "PDFViewer",
         icon: <AiOutlineFilePdf style={{ fontSize: '18' }} />
+    },
+    {
+        link: "realtime",
+        name: "Realtime Access",
+        icon: <AiOutlineFieldTime style={{ fontSize: '18' }} />
     },
 ]
