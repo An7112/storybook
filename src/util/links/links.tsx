@@ -5,7 +5,8 @@ import {
     AiOutlineLayout,
     AiOutlineFolder,
     AiOutlineFilePdf,
-    AiOutlineFieldTime
+    AiOutlineFieldTime,
+    AiOutlineRadiusUpleft
 } from 'react-icons/ai'
 
 export const linkList: Array<sidebarModal> = [
@@ -38,5 +39,10 @@ export const linkList: Array<sidebarModal> = [
         link: "realtime",
         name: "Realtime Access",
         icon: <AiOutlineFieldTime style={{ fontSize: '18' }} />
+    },
+    {
+        link: "backgroundjob",
+        name: "Background Job",
+        icon: <AiOutlineRadiusUpleft style={{ fontSize: '18' }} />
     },
 ]

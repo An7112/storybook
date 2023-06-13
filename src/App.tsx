@@ -8,6 +8,7 @@ import Layout from 'pages/layout/layout';
 import Paginated from 'pages/paginated/paginated';
 import PDFViewer from 'pages/pdf-viewer/pdfViewer';
 import Realtime from 'pages/realtime/realtime';
+import BackgroundJob from 'pages/background-job/background-job';
 function App() {
 
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path='/paginated' element={<Paginated />} />
             <Route path='/pdfviewer' element={<PDFViewer />} />
             <Route path='/realtime' element={<Realtime />} />
+            <Route path='/backgroundjob' element={<BackgroundJob />} />
           </Routes>
         </div>
       </div>
