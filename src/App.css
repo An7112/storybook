@@ -19,6 +19,11 @@
   width: calc(100% - 280px);
 }
 
+.container-custom.col-2{
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (max-width: 768px) {
   .container {
     flex-direction: column;
